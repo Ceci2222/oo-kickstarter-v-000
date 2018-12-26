@@ -10,7 +10,7 @@ class Backer
   
   def back_project(project)
     @backed_projects << project.title
-    project.backers << project.name
+    project.each {|p| project.backers << p.name}
   end
   
   
